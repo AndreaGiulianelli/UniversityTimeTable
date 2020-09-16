@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+<html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta charset="utf-8"/>
+<meta content="initial-scale=1.0, user-scalable=yes, width=device-width, minimum-scale=1.0" name="viewport"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>Orario delle lezioni — Ingegneria e scienze informatiche - Laurea - Cesena</title>
+<!-- TODO: spostare su registry plone -->
+<link href="/++theme++unibotheme.cds/css/cds.css?1506186616" rel="stylesheet" type="text/css"/>
+<script async="" src="https://www.unibo.it/cookies/cookies.js"></script>
+<meta content="Ingegneria e scienze informatiche, Laurea, Cesena" property="unibo:umtitle"/><meta content="Consulta il calendario delle lezioni in base all'anno a cui sei iscritto." name="description"/><meta content="summary" name="twitter:card"/><meta content="Plone site" property="og:site_name"/><meta content="Orario delle lezioni" property="og:title"/><meta content="website" property="og:type"/><meta content="Consulta il calendario delle lezioni in base all'anno a cui sei iscritto." property="og:description"/><meta content="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni" property="og:url"/><meta content="https://corsi.unibo.it/logo.png" property="og:image"/><meta content="image/png" property="og:image:type"/><meta content="Plone - http://plone.com" name="generator"/><link href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni" rel="canonical"/><link href="https://corsi.unibo.it/favicon.ico" rel="shortcut icon" type="image/x-icon"/><link href="https://corsi.unibo.it/touch_icon.png" rel="apple-touch-icon"/><link href="https://corsi.unibo.it/magistralecu/ScienzeFormazionePrimaria/@@search" rel="search" title="Cerca nel sito"/><link data-bundle="production" href="https://corsi.unibo.it/++plone++production/++unique++2020-07-28T16:55:28.640702/default.css" rel="stylesheet" type="text/css"/><link data-bundle="bundle-leaflet" href="https://corsi.unibo.it/++plone++patternslib/++unique++2018-02-19%2012%3A21%3A02/bundle-leaflet-compiled.css" rel="stylesheet" type="text/css"/><script type="text/javascript">PORTAL_URL = 'https://corsi.unibo.it';</script><script data-bundle="production" src="https://corsi.unibo.it/++plone++production/++unique++2020-07-28T16:55:28.640702/default.js" type="text/javascript"></script><script data-bundle="unibo-cds-charts" src="https://corsi.unibo.it/++plone++unibo.cds/++unique++None/unibo-cds-charts-compiled.js" type="text/javascript"></script><script data-bundle="unibo-cds-fullcalendar" src="https://corsi.unibo.it/++plone++unibo.cds/++unique++None/unibo-cds-fullcalendar-compiled.js" type="text/javascript"></script><script data-bundle="bundle-leaflet" src="https://corsi.unibo.it/++plone++patternslib/++unique++2018-02-19%2012%3A21%3A02/bundle-leaflet-compiled.min.js" type="text/javascript"></script><script data-bundle="patterns" src="https://corsi.unibo.it/++plone++patternslib/++unique++2018-02-19%2012%3A21%3A02/patterns-compiled.min.js" type="text/javascript"></script></head>
+<body class="frontend icons-on pat-markspeciallinks portaltype-oraricorsopage section-orario-lezioni site-IngegneriaScienzeInformatiche template-view thumbs-on userrole-anonymous viewpermission-view ingegneria-architettura ceruleo" data-base-url="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni" data-i18ncatalogurl="https://corsi.unibo.it/plonejsi18n" data-pat-markspeciallinks='{"external_links_open_new_window": true, "mark_special_links": false}' data-pat-pickadate='{"date": {"selectYears": 200}, "time": {"interval": 5 } }' data-pat-plone-modal='{"actionOptions": {"displayInModal": false, "timeout": 30000}}' data-portal-url="https://corsi.unibo.it" data-view-url="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni" dir="ltr" id="visual-portal-wrapper"><div class="site-toolbar" id="u-site-toolbar"></div><div class="editor-bar" id="u-editors-toolbar"></div><div aria-label="link a servizi online e applicativi" class="unibo-noparse" id="u-toolbar" role="navigation">
+<div class="unibo-noparse" id="toolbar">
+<ul class="unibo-bar">
+<li class="with-arrow">
+<a class="visible-mobile" href="//search.unibo.it/CMSUniboWeb/UniboSearch/results.aspx" target="_blank">
+<i aria-hidden="true" class="fa fa-search"></i>
+        Cerca
+      </a>
+<a class="hidden-mobile open-menu -unibo-toggler close" data-disabled-when="#toolbar-trigger" data-group="topbar" data-target="#popup-search" href="//search.unibo.it/CMSUniboWeb/UniboSearch/results.aspx" id="link-popup-search" target="_blank">
+<i aria-hidden="true" class="fa fa-search"></i>
+        Cerca
+      </a>
+<div class="hidden" id="popup-search">
+<form action="//search.unibo.it/CMSUniboWeb/UniboSearch/results.aspx" class="search" id="uniboSearch" method="get" target="_blank">
+<input name="lang" type="hidden" value="it"/>
+<!-- TODO: check if this is valid for everyone -->
+<input name="site" type="hidden" value="corsi.unibo.it/laurea/IngegneriaScienzeInformatiche"/>
+<input name="filter" type="hidden" value="site:corsi.unibo.it/laurea/IngegneriaScienzeInformatiche"/>
+<fieldset><input aria-label="Cerca nel sito" name="query" placeholder="Cerca nel sito" type="text" value=""/>
+<button title="Vai"></button>
+</fieldset>
+</form>
+<a class="-unibo-toggler-close umtrack" data-umc="topbar" data-uml="Chiudi Popup ricerca" href="#popup-search" style="display: inline;">Chiudi</a>
+</div>
+</li>
+<li class="with-arrow">
+<a class="visible-mobile umtrack" data-umc="topbar" data-uml="Popup rubrica" href="//search.unibo.it/CMSUniboWeb/UniboSearch/Rubrica.aspx" target="_blank">
+<i aria-hidden="true" class="fa fa-address-book"></i>Rubrica
+        </a>
+<a class="hidden-mobile open-menu -unibo-toggler close umtrack" data-disabled-when="#toolbar-trigger" data-group="topbar" data-target="#popup-address-book" data-umc="topbar" data-uml="Popup rubrica" href="//search.unibo.it/CMSUniboWeb/UniboSearch/Rubrica.aspx" id="link-address-book" target="_blank">
+<i aria-hidden="true" class="fa fa-address-book"></i>Rubrica
+          </a>
+<div class="hidden" id="popup-address-book">
+<form action="//search.unibo.it/CMSUniboWeb/UniboSearch/Rubrica.aspx" class="search" method="get" target="_blank">
+<fieldset>
+<input name="tab" type="hidden" value="FullTextPanel"/>
+<input name="lang" type="hidden" value="it"/>
+<input checked="checked" id="pers" name="tipo" type="radio" value="people"/>
+<label for="pers">Persone</label>
+<input id="strut" name="tipo" type="radio" value="struct"/>
+<label for="strut">Strutture</label>
+<input aria-label="Cerca nella rubrica" name="query" placeholder="Cerca nella rubrica" type="text" value=""/>
+<button class="umtrack" data-umc="topbar" data-uml="Cerca Rubrica" title="Vai"></button>
+</fieldset>
+</form>
+<a class="-unibo-toggler-close umtrack" data-umc="topbar" data-uml="Chiudi Popup rubrica" href="#popup-address-book" style="display: inline;">Chiudi</a>
+</div>
+</li>
+<li class="with-arrow um">
+<a class="visible-mobile umtrack" data-umc="topbar" data-uml="Popup servizi" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online" target="_blank">
+<i aria-hidden="true" class="fa fa-cogs"></i>
+           Servizi Online
+        </a>
+<a class="hidden-mobile open-menu -unibo-toggler close umtrack" data-disabled-when="#toolbar-trigger" data-group="topbar" data-target="#popup-services" data-umc="topbar" data-uml="Popup servizi" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online" id="link-services" target="_blank">
+<i aria-hidden="true" class="fa fa-cogs"></i>
+           Servizi Online
+        </a>
+<div class="hidden" id="popup-services">
+<div class="list-wrap" id="servizionline-studenti-menu">
+<h4>Studenti</h4>
+<ul>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - AlmaEnglish" href="http://www.cla.unibo.it/corsi/almaenglish/index.html">AlmaEnglish</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - Almaesami" href="https://almaesami.unibo.it/almaesami/studenti/home.htm">Almaesami</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - AlmaRM" href="https://almarm.unibo.it/almarm/welcomeStudenti.htm">AlmaRM</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - Autocertificazioni e certificati" href="https://studenti.unibo.it">Autocertificazioni e certificati</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - Bacheca offerte di lavoro" href="https://jobplacement.unibo.it/it/servizi-per-i-laureati/bacheca-offerte-di-lavoro">Bacheca offerte di lavoro</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - Convenzioni e tirocini" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online/guida-servizi-online-studenti/convenzioni-e-tirocini-online">Convenzioni e tirocini</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - Liste di distribuzione" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online/guida-servizi-online-studenti/liste-di-distribuzione-docenti-studenti">Liste di distribuzione</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - Piani di studio" href="https://studenti.unibo.it">Piani di studio</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - Presente" href="https://presente.unibo.it/">Presente</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - Servizi bibliotecari" href="http://www.sba.unibo.it/it">Servizi bibliotecari</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - Studenti Online" href="https://studenti.unibo.it">Studenti Online</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - Tesi online" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online/guida-servizi-online-studenti/ams-tesi-online">Tesi online</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - UniboStore" href="https://www.unibostore.it/">UniboStore</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Studenti - Virtuale" href="https://virtuale.unibo.it">Virtuale</a></li>
+</ul>
+</div>
+<div class="list-wrap" id="servizionline-personale-menu">
+<h4>Personale</h4>
+<ul>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Almaesami" href="https://almaesami.unibo.it/almaesami/welcome.htm">Almaesami</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Almaregistri" href="https://almaregistri.unibo.it/almaregistri/welcome.htm">Almaregistri</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - AlmaRM" href="https://almarm.unibo.it/almarm/personale/home.htm">AlmaRM</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Cedolini web" href="https://cedolini.unibo.it/">Cedolini web</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Concilium" href="https://concilium.unibo.it/">Concilium</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Convenzioni e tirocini" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online/servizi-online-per-studenti-1/guida-servizi-online-studenti/convenzioni-e-tirocini-online">Convenzioni e tirocini</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Incarichi extraistituzionali" href="https://incarichiextraistituzionali.unibo.it/incarichiextraistituzionali/init.do">Incarichi extraistituzionali</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - IRIS - Archivio produzione scientifica" href="https://cris.unibo.it">IRIS - Archivio produzione scientifica</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Liste di distribuzione" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online/guida-servizi-online-studenti/liste-di-distribuzione-docenti-studenti">Liste di distribuzione</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - NormAteneo" href="http://www.normateneo.unibo.it/">NormAteneo</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - OrganiWeb" href="https://intranet.unibo.it/organiweb">OrganiWeb</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Piattaforma stampati" href="http://www.stampatiunibo.it/">Piattaforma stampati</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Presente" href="https://presente.unibo.it/">Presente</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Presenze web" href="https://presenzeweb.unibo.it/presenzeweb/init.do">Presenze web</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Servizi bibliotecari" href="http://www.sba.unibo.it/it">Servizi bibliotecari</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Sito Web Personale" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online/il-mio-portale/sito-web-personale">Sito Web Personale</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Tesi online" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online/guida-servizi-online-studenti/ams-tesi-online">Tesi online</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Titulus" href="https://intranet.unibo.it/MioPortale/Pagine/TitulusProtocollo.aspx">Titulus</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - UniboImmagine " href="http://uniboimmagine.unibo.it">UniboImmagine </a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - U-Web Reporting - Reportistica Contabile Progetti" href="https://unibo.u-web.cineca.it/apprep/#!/lanciorapido">U-Web Reporting - Reportistica Contabile Progetti</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Virtuale" href="https://virtuale.unibo.it">Virtuale</a></li>
+<li><a class="umtrack" data-umc="topbar" data-uml="Personale - Vedi tutti" href="https://intranet.unibo.it/MioPortale/Pagine/ServiziOnline.aspx">Vedi tutti</a></li>
+</ul>
+</div>
+<a class="-unibo-toggler-close umtrack" data-umc="topbar" data-uml="Chiudi Popup servizi" href="#popup-services" style="display: inline;">Chiudi</a>
+</div>
+</li>
+<li>
+<a class="umtrack" data-umc="topbar" data-uml="Intranet" href="https://intranet.unibo.it/" target="_blank">
+<i aria-hidden="true" class="fa fa-lock"></i>
+        Intranet d'ateneo
+      </a>
+</li>
+<li class="with-arrow">
+<a class="visible-mobile" data-umc="topbar" data-uml="Popup email" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online/la-mia-e-mail" target="_blank">
+<i aria-hidden="true" class="fa fa-envelope"></i>La mia e-mail</a>
+<a class="hidden-mobile open-menu -unibo-toggler close umtrack" data-disabled-when="#toolbar-trigger" data-group="topbar" data-target="#popup-email" data-umc="topbar" data-uml="Popup email" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online/la-mia-e-mail" id="link-email" target="_blank">
+<i aria-hidden="true" class="fa fa-envelope"></i>La mia e-mail</a>
+<div class="hidden" id="popup-email">
+<ul>
+<li>
+<a class="umtrack" data-umc="topbar" data-uml="Email Studenti" href="http://www.unibo.it/it/servizi-e-opportunita/servizi-online/la-mia-e-mail/la-mia-e-mail-per-gli-studenti" target="_blank">La mia e-mail Studenti</a>
+</li>
+<li>
+<a class="umtrack" data-umc="topbar" data-uml="Email Personale" href="https://mail.unibo.it/" target="_blank">La mia e-mail Personale</a>
+</li>
+</ul>
+<a class="-unibo-toggler-close umtrack" data-umc="topbar" data-uml="Chiudi Popup email" href="#popup-email" style="display: inline;">Chiudi</a>
+</div>
+</li>
+<li>
+<a class="umtrack" data-umc="topbar" data-uml="Mio portale" href="https://www.unibo.it/it/servizi-e-opportunita/servizi-online/il-mio-portale" target="_blank">
+<i aria-hidden="true" class="fa fa-user"></i>Il mio portale</a>
+</li>
+</ul>
+<span id="toolbar-trigger"> </span>
+</div>
+</div><header class="header" id="u-header">
+<div aria-label="scorciatoie per la navigazione" class="hiddenKeys" id="u-hiddenKeys" role="navigation">
+<a accesskey="c" href="#u-content-wrapper">vai al contenuto della pagina</a>
+<a accesskey="n" href="#u-main-menu">vai al menu di navigazione</a>
+</div>
+<div class="header-container">
+<a class="alma cesena" href="https://www.unibo.it/it/campus-cesena">Vai alla Homepage del Campus di Cesena</a>
+<a class="text-wrap" href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche">
+<span>Laurea in</span>
+            Ingegneria e scienze informatiche
+            
+        </a>
+</div>
+<div class="menu-container">
+<div aria-label="Menù di navigazione" class="main-menu" id="u-main-menu" role="navigation">
+<div class="select-lang" id="languageselector">
+<ul id="portal-languageselector" role="tablist">
+<li aria-selected="true" class="selected language-it" role="tab">
+<a aria-label="Italiano" href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche">it</a>
+</li>
+<li aria-selected="false" class="language-en" role="tab">
+<a aria-label="English" href="https://corsi.unibo.it/1cycle/ComputerScienceEngineering">en</a>
+</li>
+</ul>
+</div>
+<a aria-pressed="false" class="menu-button" data-target="#main-menu" href="" role="button">
+<i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>Menu
+    </a>
+<ul>
+<li id="portaltab-index.html">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/index.html" title="">Home</a>
+</li>
+<li id="portaltab-il-corso">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/il-corso" title="">Il Corso</a>
+</li>
+<li id="portaltab-iscriversi">
+<a class="umtrack" data-googleads="true" data-googleadsrequired="true" data-uma="Iscriversi/click" data-umc="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/iscriversi" data-uml="{umtitle} - Iscriversi/click" href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/iscriversi" title="">Iscriversi</a>
+</li>
+<li class="selected" id="portaltab-studiare">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/studiare" title="">Studiare</a>
+</li>
+<li id="portaltab-opportunita">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/opportunita" title="">Opportunità</a>
+</li>
+<li id="portaltab-bacheca">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/bacheca" title="">Bacheca</a>
+</li>
+<li id="portaltab-contatti">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/contatti" title="">Contatti</a>
+</li>
+</ul>
+</div>
+</div>
+</header><div id="u-message"><aside id="global_statusmessage">
+<div>
+</div>
+</aside></div><main>
+<div class="content-wrapper" id="u-content-wrapper">
+<div class="lead" id="u-lead">
+<div class="row">
+<div class="column large-15">
+<nav class="plone-breadcrumb" id="portal-breadcrumbs">
+<div class="container">
+<span class="hiddenStructure" id="breadcrumbs-you-are-here">Tu sei qui:</span>
+<ol aria-labelledby="breadcrumbs-you-are-here">
+<li id="breadcrumbs-home">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche">Home</a>
+</li>
+<li id="breadcrumbs-1">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/studiare">Studiare</a>
+</li>
+<li id="breadcrumbs-2">
+<span id="breadcrumbs-current">Orario delle lezioni</span>
+</li>
+</ol>
+</div>
+</nav>
+<div class="column-content" id="u-column-content">
+<h1><span>Orario delle lezioni</span></h1>
+</div>
+<div class="occhiello">
+<p>Consulta il calendario delle lezioni in base all'anno a cui sei iscritto.</p>
+</div>
+<div class="filter-wrap">
+<form action="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni">
+<div class="filter-field">
+<label class="" for="search-orari-anno">Anno di corso</label>
+<select data-url="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/@@available_curricula" id="search-orari-anno" name="anno">
+<option value="1">1° Anno</option>
+<option value="2">2° Anno</option>
+<option selected="selected" value="3">3° Anno</option>
+</select>
+</div>
+<div class="filter-field" style="display:none">
+<label for="search-orari-curricula">Curriculum</label>
+<select id="search-orari-curricula" name="curricula">
+<option value="">Seleziona il curriculum</option>
+</select>
+</div>
+<button class="bg-white-secondary hover-secondary-dark">Vai</button>
+<button name="_authenticator" style="display:none"></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="content-core" id="u-content-core">
+<div class="row">
+<div class="column large-16">
+<div class="share-bar" id="u-share">
+<a class="share" href="#popup-social" rel="" title="Condividi">
+<i aria-hidden="true" class="fa fa-share-alt"></i>
+</a>
+<div class="is-closed social" id="popup-social">
+<ul>
+<li class="facebook">
+<a data-href="http://www.facebook.com/sharer.php?u=--href--&amp;t=Orario+delle+lezioni" href="http://www.facebook.com/sharer.php?u=--href--&amp;t=Orario+delle+lezioni" role="link" title="Condividi su facebook">
+<i aria-hidden="true" class="fa fa-facebook-official"></i>
+<span>Facebook</span>
+</a>
+</li>
+<li class="lnkedin">
+<a data-href="https://www.linkedin.com/shareArticle/?url=--href--" href="https://www.linkedin.com/shareArticle/?url=--href--" role="link" title="Condividi su Linkedin">
+<i aria-hidden="true" class="fa fa-linkedin-square"></i>
+<span>Linkedin</span>
+</a>
+</li>
+<li class="twitter">
+<a data-href="https://twitter.com/share?url=--href--&amp;text=Orario+delle+lezioni&amp;hashtags=unibo" href="https://twitter.com/share?url=--href--&amp;text=Orario+delle+lezioni&amp;hashtags=unibo" role="link" title="Condividi su Twitter">
+<i aria-hidden="true" class="fa fa-twitter"></i>
+<span>Twitter</span>
+</a>
+</li>
+<li class="mail">
+<a data-href="mailto:?body=Titolo%3A%20Orario%20delle%20lezioni%0AIndirizzo%3A%20--href--%0ATesto%3A%20Consulta%20il%20calendario%20delle%20lezioni%20in%20base%20all%27anno%20a%20cui%20sei%20iscritto.&amp;subject=%5BUniboCDS%5D%20Qualcuno%20vuole%20condividere%20questa%20pagina%20con%20te%20Orario%20delle%20lezioni" href="mailto:?body=Titolo%3A%20Orario%20delle%20lezioni%0AIndirizzo%3A%20--href--%0ATesto%3A%20Consulta%20il%20calendario%20delle%20lezioni%20in%20base%20all%27anno%20a%20cui%20sei%20iscritto.&amp;subject=%5BUniboCDS%5D%20Qualcuno%20vuole%20condividere%20questa%20pagina%20con%20te%20Orario%20delle%20lezioni" role="link" title="Invia ad un amico">
+<i aria-hidden="true" class="fa fa-envelope-o"></i>
+<span>Invia ad un amico</span>
+</a>
+</li>
+</ul>
+</div>
+<a class="print" href="" title="Stampa">
+<i aria-hidden="true" class="fa fa-print"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="column large-16">
+<div class="tile type-deadline" data-tileid="">
+<div class="sessioni-box">
+<strong>Periodi di lezione:</strong>
+<div class="read-more-preview">
+<span class="readmore-reduced">Il Corso erogherà in presenza e a distanza le lezioni del primo semestre dell’a.a. 2020/21. Tutte le lezioni, anche…</span>
+<a class="read-more" href="#">Leggi di più</a>
+<div class="read-more-surplus" style="display: none;">
+<p>Il Corso erogherà in presenza e a distanza le lezioni del primo semestre dell’a.a. 2020/21. Tutte le lezioni, <strong>anche quelle in presenza</strong>, saranno frequentabili online e sarà indicato il link alla stanza virtuale per la frequenza da remoto. Per le lezioni frequentabili anche in presenza è indicato il luogo di svolgimento. </p>
+<p>Attraverso un'applicazione web gli studenti potranno indicare le attività formative che intendono seguire e la relativa modalità di frequenza che prevedono di adottare. Tale programmazione inizierà in settembre, riguarderà periodi di due settimane e verrà ripetuta con cadenza regolare per garantire la massima flessibilità. Ciò permetterà di gestire in sicurezza e con efficacia la capienza delle aule e prevedere eventuali turnazioni solo laddove si rendesse necessario.<br/><br/>Le matricole dell'Anno Accademico 2020/2021 saranno suddivise in due classi: A e B per gli insegnamenti di Programmazione, Algoritmi e Strutture Dati e Architetture degli Elaboratori.<br/>La classe B è composta da 144 matricole e sarà completata al termine delle iscrizioni.<br/>La classe A è composta da 100 matricole ed è già completa.<br/>In fondo alla pagina sono pubblicati gli allegati contenenti le matricole che apparterranno alla classe A e alla classe B.</p>
+</div>
+<a class="read-less" href="#" style="display: none;">Leggi meno</a>
+</div>
+<script type="text/javascript">
+        /**
+        * Readmore Javascript must stay inline because we dont want to install this package
+        */
+        require(["jquery"], function ($) {
+            "use strict";
+            $(document).ready(function () {
+                // $("a.read-more").on("click", function (evt){
+                //     evt.preventDefault();
+                //     $(this).prevAll().andSelf().hide();
+                //     $('.read-more-surplus', $(this).closest('.read-more-preview')).show();
+                // });
+                $( ".read-more" ).click(function(event) {
+    					event.preventDefault();
+    					$(this).siblings( ".read-more-surplus" ).show();
+    					$(this).siblings( ".read-less" ).show();
+    					$(this).siblings( ".readmore-reduced" ).hide();
+    					$(this).hide();
+    				});
+    				$( ".read-less" ).click(function(event) {
+    					event.preventDefault();
+    					$(this).siblings( ".readmore-reduced" ).show();
+    					$(this).siblings( ".read-more" ).show();
+    					$(this).siblings( ".read-more-surplus" ).hide();
+    					$(this).hide();
+    				});
+            });
+        });
+    </script>
+</div>
+</div>
+<div class="area-orari">
+<div>Gli orari di lezione del 3° Anno - Ingegneria e scienze informatiche (codice 8615)</div>
+<div>I dati possono subire variazioni. Controlla questa pagina frequentemente.</div>
+<div class="flex-tabs">
+<div class="panel">
+<div class="tab-head">
+<a aria-expanded="false" aria-selected="false" class="button-popup openclose-insegnamenti" href="#">
+<span>Filtra per insegnamento</span>
+<i aria-hidden="true" class="fa fa-caret-down"></i>
+</a>
+<form aria-hidden="true" class="popup-wrapper" id="insegnamenti-popup">
+<input id="hidden_anno" name="anno" type="hidden" value="3"/>
+<input id="hidden_curricula" name="curricula" type="hidden" value=""/>
+<input id="hidden_calendar_view" name="calendar_view" type="hidden" value=""/>
+<input id="hidden_date" name="date" type="hidden" value=""/>
+<ul>
+<li>
+<input id="checkbox_0" name="insegnamenti" type="checkbox" value="2020-000-355692--I"/>
+<label class="" for="checkbox_0">BASI DI DATI AVANZATE / (1) Modulo 1</label>
+</li>
+<li>
+<input id="checkbox_1" name="insegnamenti" type="checkbox" value="2020-000-355693--I"/>
+<label class="" for="checkbox_1">BASI DI DATI AVANZATE / (2) Modulo 2</label>
+</li>
+<li>
+<input id="checkbox_2" name="insegnamenti" type="checkbox" value="2020-000-317848--I"/>
+<label class="" for="checkbox_2">COMPUTER GRAPHICS</label>
+</li>
+<li>
+<input id="checkbox_3" name="insegnamenti" type="checkbox" value="2020-000-354257--I"/>
+<label class="" for="checkbox_3">CRITTOGRAFIA</label>
+</li>
+<li>
+<input id="checkbox_4" name="insegnamenti" type="checkbox" value="2020-000-345049--I"/>
+<label class="" for="checkbox_4">ELETTRONICA PER L'INFORMATICA</label>
+</li>
+<li>
+<input id="checkbox_5" name="insegnamenti" type="checkbox" value="2020-000-317850--I"/>
+<label class="" for="checkbox_5">HIGH-PERFORMANCE COMPUTING</label>
+</li>
+<li>
+<input id="checkbox_6" name="insegnamenti" type="checkbox" value="2020-000-317839--I"/>
+<label class="" for="checkbox_6">INFORMATICA E DIRITTO</label>
+</li>
+<li>
+<input id="checkbox_7" name="insegnamenti" type="checkbox" value="2020-000-355686--I"/>
+<label class="" for="checkbox_7">INGEGNERIA DEL SOFTWARE</label>
+</li>
+<li>
+<input id="checkbox_8" name="insegnamenti" type="checkbox" value="2020-000-317852--I"/>
+<label class="" for="checkbox_8">PROGRAMMAZIONE DI APPLICAZIONI DATA INTENSIVE / (1) Modulo 1</label>
+</li>
+<li>
+<input id="checkbox_9" name="insegnamenti" type="checkbox" value="2020-000-326549--I"/>
+<label class="" for="checkbox_9">PROGRAMMAZIONE DI APPLICAZIONI DATA INTENSIVE / (2) Modulo 2</label>
+</li>
+<li>
+<input id="checkbox_10" name="insegnamenti" type="checkbox" value="2020-000-340452--I"/>
+<label class="" for="checkbox_10">PROGRAMMAZIONE DI SISTEMI MOBILE</label>
+</li>
+<li>
+<input id="checkbox_11" name="insegnamenti" type="checkbox" value="2020-000-363200--I"/>
+<label class="" for="checkbox_11">RETI DI TELECOMUNICAZIONE</label>
+</li>
+<li>
+<input id="checkbox_12" name="insegnamenti" type="checkbox" value="2020-000-317845--I"/>
+<label class="" for="checkbox_12">RICERCA OPERATIVA / (1) Modulo 1</label>
+</li>
+<li>
+<input id="checkbox_13" name="insegnamenti" type="checkbox" value="2020-000-355689--I"/>
+<label class="" for="checkbox_13">RICERCA OPERATIVA / (2) Modulo 2</label>
+</li>
+<li>
+<input id="checkbox_14" name="insegnamenti" type="checkbox" value="2020-000-364181--I"/>
+<label class="" for="checkbox_14">SISTEMI EMBEDDED E INTERNET-OF-THINGS</label>
+</li>
+<li>
+<input id="checkbox_15" name="insegnamenti" type="checkbox" value="2020-000-344898--I"/>
+<label class="" for="checkbox_15">SYSTEMS INTEGRATION / (1) Modulo 1</label>
+</li>
+<li>
+<input id="checkbox_16" name="insegnamenti" type="checkbox" value="2020-000-345047--I"/>
+<label class="" for="checkbox_16">SYSTEMS INTEGRATION / (2) Modulo 2</label>
+</li>
+<li>
+<input id="checkbox_17" name="insegnamenti" type="checkbox" value="2020-000-345048--I"/>
+<label class="" for="checkbox_17">SYSTEMS INTEGRATION / (3) Modulo 3</label>
+</li>
+<li>
+<input id="checkbox_18" name="insegnamenti" type="checkbox" value="2020-000-340454--I"/>
+<label class="" for="checkbox_18">TECNOLOGIE WEB</label>
+</li>
+<li>
+<input id="checkbox_19" name="insegnamenti" type="checkbox" value="2020-000-355691--I"/>
+<label class="" for="checkbox_19">VISIONE ARTIFICIALE</label>
+</li>
+</ul>
+<div class="go-to-container">
+<button class="background-secondary hover-secondary-dark" href="">Aggiorna elenco</button>
+<button name="_authenticator" style="display:none"></button>
+</div>
+</form>
+<ul class="group-button">
+<li>
+<a class="border-secondary-dark list-agenda-switcher background-secondary-dark" href="#" id="calendar-list-button" title="lista"><i aria-hidden="true" class="fa fa-list"></i></a>
+</li>
+<li>
+<a class="border-secondary-dark list-agenda-switcher" href="#" id="calendar-agenda-button" title="tabella"><i aria-hidden="true" class="fa fa-table"></i></a>
+</li>
+</ul>
+</div>
+<div data-day-text="Giorno" data-default-date="2020-09-21 00:00:00" data-month-text="30 Giorni" data-no-events-message="Non ci sono dati da visualizzare in questo periodo." data-url="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/@@orario_reale_json?anno=3&amp;curricula=" data-week-text="Settimana" id="calendar">
+<div class="modal-box unibo-noparse" id="calendario-modal" style="display:none">
+<div class="detail-content">
+<div class="title" id="calendario-modal-title">82069 - <span class="text-secondary">Electromagnetic Propagation for  Wireless Systems M</span></div>
+<p class="text-secondary" id="calendario-modal-data">12 Dicembre 2017 09:00 - 11:30</p>
+<p>
+                                                                Crediti formativi:
+                                                                <span id="calendario-modal-cfu">9</span>
+</p>
+<p>
+                                                                Periodo di lezione:
+                                                                <span id="calendario-modal-periodo">September 2017 - 18 December 2017</span>
+</p>
+<p>
+                                                                Docente:
+                                                                <span id="calendario-modal-docente">ORESTE ANDRISANO</span>
+</p>
+<p>
+                                                                Luogo:
+                                                                <span id="calendario-modal-aula">AULA 4.1 - Piano Terra - Viale del Risorgimento 2 - Bologna</span>
+</p>
+<p class="note" id="calendario-modal-note">
+<i aria-hidden="true" class="fa fa-info-circle text-primary"></i>
+                                                                Si segnala che la lezione avrà inizio anticipato alle 8.45
+                                                            </p>
+</div>
+<div class="go-to-container">
+<button class="background-secondary" id="calendario-modal-close">Chiudi</button>
+</div>
+</div>
+</div>
+</div>
+<div class="field kssattr-fieldname-form.widgets.dx_tiles" id="formfield-dx_tiles">
+<div class="fieldErrorBox"></div>
+<div class="tilesList tiles-list-dx-tiles" data-field-name="dx_tiles">
+<div class="tile type-links_attachments" data-tileid="729785404ded464dbaa7b587740b55cb">
+<div class="tile-wrapper" id="tile-729785404ded464dbaa7b587740b55cb">
+<div class="link-box">
+<div class="title-box-center">
+<div>
+<h3 class="border-secondary">MATRICOLE CLASSE A e B</h3>
+</div>
+</div>
+<div class="tile-resources">
+<ul class="links">
+<li class="tile-resource" id="a40565a9e7f14a2aa72bca53ed371ff6">
+<i aria-hidden="true" class="fa fa-download"></i>
+<div class="text-wrap">
+<p class="title-attachment">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/matricole-classe-a-a-a-2020-2021.pdf/@@download/file/Matricole Classe A - A.A. 2020.2021.pdf">Matricole Classe A - A.A. 2020/2021</a>
+</p>
+<p class="info-attachment">[
+          .pdf
+          101Kb
+          ]</p>
+</div>
+</li>
+<li class="tile-resource" id="26a322823e214503997e3056e84da3da">
+<i aria-hidden="true" class="fa fa-download"></i>
+<div class="text-wrap">
+<p class="title-attachment">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/matricole-classe-b-a-a-20202021.pdf/@@download/file/Matricole Classe B - A.A. 20202021.pdf">Matricole Classe B - A.A. 2020/2021</a>
+</p>
+<p class="info-attachment">[
+          .pdf
+          100Kb
+          ]</p>
+</div>
+</li>
+<li class="tile-resource" id="17378624d9164bdba5780f6a9325e203">
+<i aria-hidden="true" class="fa fa-download"></i>
+<div class="text-wrap">
+<p class="title-attachment">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/classe-a_completa.pdf/@@download/file/CLASSE A_completa.pdf">Matricole Classe A - A.A. 2019/2020</a>
+</p>
+<p class="info-attachment">[
+          .pdf
+          129Kb
+          ]</p>
+</div>
+</li>
+<li class="tile-resource" id="e7ec41539eb641f7b07dba576e406648">
+<i aria-hidden="true" class="fa fa-download"></i>
+<div class="text-wrap">
+<p class="title-attachment">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/classe-b.pdf/@@download/file/CLASSE B.pdf">Matricole Classe B - A.A. 2019/2020</a>
+</p>
+<p class="info-attachment">[
+          .pdf
+          104Kb
+          ]</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="tile type-links_attachments" data-tileid="93f789039aa942d9b0e38ba3bb5bc458">
+<div class="tile-wrapper" id="tile-93f789039aa942d9b0e38ba3bb5bc458">
+<div class="link-box">
+<div class="title-box-center">
+<div>
+<h3 class="border-secondary">Orario delle lezioni</h3>
+</div>
+</div>
+<div class="tile-resources">
+<ul class="links">
+<li class="tile-resource" id="a4499c6ffccb4296a9e89747ddf5e241">
+<div class="text-wrap">
+<a href="http://www.cla.unibo.it/corsi/moduli-preparazione-prova-idoneita/sedi-romagna">Idoneità d'inglese B1</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="tile type-links_attachments" data-tileid="ac0206dffafb4e17884380bcdbb13ae2">
+<div class="tile-wrapper" id="tile-ac0206dffafb4e17884380bcdbb13ae2">
+<div class="link-box">
+<div class="title-box-center">
+<div>
+<h3 class="border-secondary">Come raggiungere il nuovo Campus Universitario di Cesena</h3>
+</div>
+</div>
+<div class="tile-resources">
+<ul class="links">
+<li class="tile-resource" id="62f3e4dbe00c4e668846b1c7180d4aad">
+<i aria-hidden="true" class="fa fa-download"></i>
+<div class="text-wrap">
+<p class="title-attachment">
+<a href="https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/linea6_uni.pdf/@@download/file/linea6_uni.pdf">LINEA 6 - AUTOBUS CESENA - PLANIMETRIA</a>
+</p>
+<p class="info-attachment">[
+          .pdf
+          2169Kb
+          ]</p>
+<p>Per arrivare alla nuova sede Universitaria dalla stazione di Cesena è possibile prendere la linea 6 dell'autobus.  La fermata di arrivo dalla stazione sarà posizionata in via Saba a ca. 15  metri da via Pavese.  La fermata di ritorno alla stazione sarà invece posizionata in via Pavese di fronte al Campus Universitario.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer" id="u-footer">
+<div aria-label="link ai social" class="follow-us unibo-noparse" id="follow-us-menu" role="navigation">
+<div class="follow-wrapper">
+</div>
+<div class="follow-course">
+<p>Segui il corso su:</p>
+<ul>
+<li>
+<a class="umtrack" data-googleads="true" data-uma="Facebook/click" data-umc="https://www.facebook.com/Ingegneria-e-Scienze-Informatiche-Cesena-371487702864280/" data-uml="{umtitle} - Facebook/click" href="https://www.facebook.com/Ingegneria-e-Scienze-Informatiche-Cesena-371487702864280/">
+<i aria-hidden="true" class="fa fa-facebook"></i>
+<span>Seguici su Facebook</span>
+</a>
+</li>
+<li>
+<a class="umtrack" data-googleads="true" data-uma="Linkedin/click" data-umc="https://www.linkedin.com/groups/2029274/" data-uml="{umtitle} - Linkedin/click" href="https://www.linkedin.com/groups/2029274/">
+<i aria-hidden="true" class="fa fa-linkedin"></i>
+<span>Seguici su Linkedin</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="right">
+<div class="follow-site">
+<p>Segui Unibo su:</p>
+<ul>
+<li>
+<a href="https://www.youtube.com/user/UniBologna">
+<i aria-hidden="true" class="fa fa-youtube-play"></i>
+<span>Seguici su YouTube</span>
+</a>
+</li>
+<li>
+<a href="https://www.instagram.com/unibo/">
+<i aria-hidden="true" class="fa fa-instagram"></i>
+<span>Seguici su Instagram</span>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/unibo.it">
+<i aria-hidden="true" class="fa fa-facebook"></i>
+<span>Seguici su Facebook</span>
+</a>
+</li>
+<li>
+<a href="http://www.twitter.com/UniboMagazine">
+<i aria-hidden="true" class="fa fa-twitter"></i>
+<span>Seguici su Twitter</span>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/edu/school?id=13901">
+<i aria-hidden="true" class="fa fa-linkedin"></i>
+<span>Seguici su Linkedin</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="apps-unibo">
+<p>App:</p>
+<ul>
+<li class="app-myunibo">
+<a href="https://www.unibo.it/it/ateneo/le-app-delluniversita-di-bologna/app-myunibo" title="myUniBo">
+<span>myUniBo</span>
+</a>
+</li>
+<li class="app-myalmaorienta">
+<a href="https://www.unibo.it/it/ateneo/le-app-delluniversita-di-bologna/app-myalmaorienta" title="myAlmaOrienta">
+<span>myAlmaOrienta</span>
+</a>
+</li>
+<li class="app-jobplacement">
+<a href="https://www.unibo.it/it/ateneo/le-app-delluniversita-di-bologna/app-job-placement-unibo" title="App Job Placement">
+<span>App Job Placement</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer-wrap">
+<div class="copyright" id="u-copyright">
+<a class="logo-unibo" href="https://www.unibo.it" title="Apre nuova finestra">Vai alla home del Portale Unibo</a>
+<p>©Copyright 2020 - ALMA MATER STUDIORUM - Università di Bologna - Via Zamboni, 33 - 40126 Bologna - Partita IVA: 01131710376 - <a href="https://www.unibo.it/it/ateneo/privacy-e-note-legali/privacy/informative-sul-trattamento-dei-dati-personali">Privacy</a> e <a href="https://www.unibo.it/it/ateneo/privacy-e-note-legali/note-legali">Note legali</a></p>
+</div>
+</div>
+</footer>
+<div id="analytics">
+<div id="ga_js">
+<!-- Piwik -->
+<script>var idsite=13888, subdir='/laurea/IngegneriaScienzeInformatiche', host='corsi.unibo.it', piwik_url='https://analytics.unibo.it';</script>
+<script>
+          var _paq = _paq || [];
+          if(host){
+            _paq.push(['setDomains', ["*." + host]]);
+          }
+          if(subdir){
+            _paq.push(['setCookiePath', subdir]);
+          }
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+              var u=piwik_url + "/";
+              _paq.push(['setTrackerUrl', u+'piwik.php']);
+              _paq.push(['setSiteId', parseInt(idsite)]);
+          })();
+          </script>
+<script async="" defer="defer" src="https://analytics.unibo.it/piwik.js"></script>
+<noscript><p><img alt="" src=" https://analytics.unibo.it/piwik.php?idsite=13888}" style="border:0;"/></p></noscript>
+<!-- End Piwik Code -->
+<!-- Analytics Tag Manager Code -->
+<script>var gtags_id=["UA-115621560-1", "UA-8102466-6"];</script>
+<script>var aw_conversion_id_agency='';</script>
+<script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            for (var i = 0; i < gtags_id.length; i++) {
+              gtag('config', gtags_id[i], { 'anonymize_ip': true });
+            }
+            if (aw_conversion_id_agency) {
+              gtag('config', aw_conversion_id_agency.split('/')[0], { 'anonymize_ip': true, 'groups': 'agency' });
+            }
+        </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-115621560-1"></script>
+<!-- End Analytics Tag Manager Code -->
+<!-- Common Code -->
+<script>
+          document.addEventListener("DOMContentLoaded", function(event) {
+            (function($) {
+              $(document).delegate(".umtrack", "click", function(){
+                var category=$(this).data('umc')||'link',
+                umtitle=$('meta[property="unibo:umtitle"]').attr('content') || 'undef',
+                googleads=$(this).data('googleads'),
+                googleadsrequired=$(this).data('googleadsrequired'),
+                action=$(this).data('uma')||'click',
+                label=$(this).data('uml')||($(this).attr('title') + ' - ' + $(this).attr('href'));
+                label = label.replace('{umtitle}', umtitle);
+                window.unibo_track(category, action, label, googleads, googleadsrequired);
+              });
+              window.unibo_track = function(category, action, label, googleads, googleadsrequired) {
+                if (!googleadsrequired || aw_conversion_id_agency) {
+                  if (typeof _paq !== 'undefined') {
+                    _paq.push(['trackEvent', category, action, label]);
+                  }
+                  if (typeof ga !== 'undefined') {
+                    ga('send', 'event', category, action, label);
+                  }
+                  // else if (typeof gtag !== 'undefined') {
+                  // }
+                  if (typeof gtag !== 'undefined') {
+                    gtag('event', action, {'event_category': category, 'event_label': label});
+                    if (aw_conversion_id_agency && googleads) {
+                        gtag('event', 'conversion', {
+                          'send_to': aw_conversion_id_agency
+                          // 'event_callback': callback
+                        });
+			if (typeof fbq !== 'undefined') {
+			  fbq('track', 'Lead');
+			}
+                        // return false;
+                    }
+                  }
+                }
+              }
+            })(jQuery);
+          });
+        </script>
+<!-- End Common Code -->
+</div>
+</div>
+<a class="back-to-top" href="#" title="Torna su">
+<i class="fa fa-angle-up"></i>
+</a></body>
+</html>
+[]
