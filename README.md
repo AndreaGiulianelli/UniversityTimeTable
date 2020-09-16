@@ -9,13 +9,7 @@ Use the package manager [pip] to install requests
 
 # Usage
 
-Go to the directory and make file executable
-
-```bash
-    chmod +x script.py
-```
-
-Execute the program
+Go to the directory and execute the program
 
 ```bash
     python3 script.py
