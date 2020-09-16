@@ -1,10 +1,8 @@
 '''
     This is the main script.
-    This program has the scope of web scraping the university's web page
-    in order to take the week timetable.
-    I will use the web service of UNIBO that returns JSON data
+    I will use the web service of UNIBO that returns JSON data in order to take the week timetable.
 
-    url servizio json: https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/@@orario_reale_json?anno=3&curricula=&start=2020-09-21&end=2020-09-28
+    url json service: https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/@@orario_reale_json?anno=3&curricula=&start=2020-09-21&end=2020-09-28
 '''
 from datetime import date, timedelta,datetime
 import requests
