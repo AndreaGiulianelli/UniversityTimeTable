@@ -8,7 +8,7 @@
 from datetime import date, timedelta,datetime
 import requests
 from core.subject import *
-from colorama import Fore
+from colorama import Fore,init
 import sys, getopt
 
 
@@ -47,6 +47,9 @@ url = "https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezion
 #Load the service
 result = requests.get(url);
 data = result.json()
+
+#Init Colorama, for Windows :(
+init()
 
 current_day = ""
 #Cicle over all the subjects
