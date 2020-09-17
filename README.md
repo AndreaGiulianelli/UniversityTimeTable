@@ -5,6 +5,7 @@ Use the package manager [pip] to install requests
 
 ```bash
     pip install requests
+    pip install colorama
 ```
 
 # Usage
