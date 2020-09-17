@@ -1,11 +1,10 @@
 # Installation
 
-We need python3 and the requests module in order to work.
-Use the package manager [pip] to install requests
+We need python3 and some modules in order to work.
+Use the package manager [pip] to install requests and colorama
 
 ```bash
-    pip install requests
-    pip install colorama
+    pip install -r requirements.txt
 ```
 
 # Usage
