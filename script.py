@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 '''
     This is the main script.
     I will use the web service of UNIBO that returns JSON data in order to take the week timetable.
@@ -7,6 +8,7 @@
 from datetime import date, timedelta,datetime
 import requests
 from core.subject import *
+from colorama import Fore
 
 today = date.today()
 #Get the info for the next 7 days
@@ -29,7 +31,10 @@ for index in range(0, len(data)):
         #New day
         current_day = json_data_subject["start"]
         current_date = datetime.strptime(current_day,'%Y-%m-%dT%H:%M:%S')
-        print("\n\n" + str(current_date.day) + "/" + str(current_date.month) + "/" + str(current_date.year))
-    
-    #Print the base subject info
-    print(subject)
+        print(Fore.BLUE + f"\n\n{current_date.day}", end="/")
+        print(Fore.GREEN + f"{current_date.month}", end="/")
+        print(Fore.YELLOW + f"{current_date.year}")
+
+    # Print the base subject info
+    print(Fore.RED + f"{subject}")
+
