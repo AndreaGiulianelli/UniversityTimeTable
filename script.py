@@ -9,10 +9,32 @@ from datetime import date, timedelta,datetime
 import requests
 from core.subject import *
 from colorama import Fore
+import sys, getopt
+
+
+def print_help():
+    print(f"Usage\n-y <value> or --year <value> : specify custom year (between 1 and 3)")
+
+
+#Default is third year
+year = 3
+
+#Handle arguments
+try:
+    opts, args = getopt.getopt(sys.argv[1:],"hy:",["year"])
+except getopt.GetoptError:
+    print_help()
+    sys.exit(2)
+
+for opt,arg in opts:
+    if opt == "-h":
+        print_help()
+    elif opt in ("-y","--year"):
+        year = arg
 
 today = date.today()
 #Get the info for the next 7 days
-url = "https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/@@orario_reale_json?anno=3&curricula=&start="+ str(today) +"&end=" + str(today + timedelta(days=7))
+url = "https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/@@orario_reale_json?anno="+str(year)+"&curricula=&start="+ str(today).strip() +"&end=" + str(today + timedelta(days=7))
 #url = "https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/@@orario_reale_json?anno=3&curricula=&start=2020-09-21&end=2020-09-28"
 
 #Load the service
