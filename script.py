@@ -13,15 +13,16 @@ import sys, getopt
 
 
 def print_help():
-    print(f"Usage\n-y <value> or --year <value> : specify custom year (between 1 and 3)")
+    print(f"Usage\n-y <value> or --year <value> : specify custom year (between 1 and 3)\n-c : disable colors")
 
 
 #Default is third year
 year = 3
+colors = True
 
 #Handle arguments
 try:
-    opts, args = getopt.getopt(sys.argv[1:],"hy:",["year"])
+    opts, args = getopt.getopt(sys.argv[1:],"hy:c",["year"])
 except getopt.GetoptError:
     print_help()
     sys.exit(2)
@@ -30,7 +31,13 @@ for opt,arg in opts:
     if opt == "-h":
         print_help()
     elif opt in ("-y","--year"):
+        if not arg in ("1","2","3"):
+            print_help()
+            sys.exit(2)
         year = arg
+    elif opt == "-c":
+        colors = False
+
 
 today = date.today()
 #Get the info for the next 7 days
@@ -53,10 +60,11 @@ for index in range(0, len(data)):
         #New day
         current_day = json_data_subject["start"]
         current_date = datetime.strptime(current_day,'%Y-%m-%dT%H:%M:%S')
-        print(Fore.BLUE + f"\n\n{current_date.day}", end="/")
-        print(Fore.GREEN + f"{current_date.month}", end="/")
-        print(Fore.YELLOW + f"{current_date.year}")
+        print((Fore.BLUE if colors == True else "") + f"\n\n{current_date.day}", end="/")
+        print((Fore.GREEN if colors == True else "") + f"{current_date.month}", end="/")
+        print((Fore.YELLOW if colors == True else "") + f"{current_date.year}", end=" ")
+        print((Fore.CYAN if colors == True else "") + f"{current_date.strftime('%A')}")
 
     # Print the base subject info
-    print(Fore.RED + f"{subject}")
+    print((Fore.RED if colors == True else "") + f"{subject}")
 
