@@ -22,9 +22,3 @@ You can use the parameter "-y" or "--year" to specify a year (between 1 and 3)
 
     python3 script.py --year 1
 ```
-
-You can disable colors with the parameter "-c"
-```bash
-    python3 script.py -c
-    python3 script.py -c -y 2
-```
