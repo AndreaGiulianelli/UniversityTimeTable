@@ -7,9 +7,10 @@
 '''
 from datetime import date, timedelta,datetime
 import requests
-from core.subject import *
-from colorama import Fore,init
+from core.subject import Subject
+#from colorama import Fore,init
 import sys, getopt
+import core.table_formatter as formatTable
 
 
 def print_help():
@@ -49,25 +50,36 @@ result = requests.get(url);
 data = result.json()
 
 #Init Colorama, for Windows :(
-init()
+#init()
 
 current_day = ""
 #Cicle over all the subjects
 for index in range(0, len(data)):
     json_data_subject = data[index]
-
     subject = Subject(json_data_subject)
 
-    #If the day is different from previus, so this is another day
+    #If the day is different from previous, so this is another day
     if json_data_subject["start"][:10] != current_day[:10]:
+
         #New day
+        #Close previous table
+        formatTable.put_table_footer()
+        #Open new table
         current_day = json_data_subject["start"]
         current_date = datetime.strptime(current_day,'%Y-%m-%dT%H:%M:%S')
-        print((Fore.BLUE if colors == True else "") + f"\n\n{current_date.day}", end="/")
+        formatTable.put_table_header(current_date)
+        
+        """print((Fore.BLUE if colors == True else "") + f"\n\n{current_date.day}", end="/")
         print((Fore.GREEN if colors == True else "") + f"{current_date.month}", end="/")
         print((Fore.YELLOW if colors == True else "") + f"{current_date.year}", end=" ")
-        print((Fore.CYAN if colors == True else "") + f"{current_date.strftime('%A')}")
+        print((Fore.CYAN if colors == True else "") + f"{current_date.strftime('%A')}")"""
+
+    formatTable.format_subject(subject)
+    
+#Close last table
+formatTable.put_table_footer()
 
     # Print the base subject info
-    print((Fore.RED if colors == True else "") + f"{subject}")
+    #print((Fore.RED if colors == True else "") + f"{subject}")
+
 
