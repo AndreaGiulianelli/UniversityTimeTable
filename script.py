@@ -8,13 +8,13 @@
 from datetime import date, timedelta,datetime
 import requests
 from core.subject import Subject
-from colorama import Fore,init
+from colorama import init
 import sys, getopt
 import core.table_formatter as formatTable
 
 
 def print_help():
-    print(f"Usage\n-y <value> or --year <value> : specify custom year (between 1 and 3)\n-c : disable colors\n-t or --tabular : use tabular view")
+    print(f"Usage\n-y <value> or --year <value> : specify custom year (between 1 and 3)\n-c : disable colors\n-t or --tabular : show tabular view")
 
 
 #Default is third year
@@ -52,7 +52,7 @@ result = requests.get(url);
 data = result.json()
 
 #Init Colorama, for Windows :(
-#init()
+init()
 
 current_day = ""
 #Cicle over all the subjects
@@ -68,8 +68,11 @@ for index in range(0, len(data)):
         current_date = datetime.strptime(current_day,'%Y-%m-%dT%H:%M:%S')
 
         if(tabular == True):
-            #Close previous table
-            formatTable.put_table_footer()
+
+            if(index != 0):
+                #Close previous table
+                formatTable.put_table_footer()
+
             #Open new table
             formatTable.put_table_header(current_date)
         else:

@@ -1,15 +1,12 @@
-ifdef::env-github[]
-:note-caption: :information_source:
-endif::[]
-
 :requests:  https://requests.readthedocs.io/en/master/[Requests]
 :pip:       https://pip.pypa.io/en/stable/[pip]
-:colorama:  https://pypi.org/project/colorama/[Colorama]
+:colorama:  https://pypi.org/project/colorama/[colorama]
+:termcolor:  https://pypi.org/project/termcolor/[TermColor]
 
 == Installation
 
 We need python3 and some modules in order to work.
-Use the package manager {pip} to install {requests} and {colorama}.
+Use the package manager {pip} to install {requests}, {colorama} and {termcolor}.
 
 ----
 pip install -r requirements.txt
@@ -44,13 +41,5 @@ You can enable tabular view with the parameter `-t` or `--tabular`
 ----
     python3 script.py --tabular
     python3 script.py -t -y 1
+    python3 script.py -t -c
 ----
-
-[NOTE]
-====
-At the current development state the use of the two options `-c` and `-t` shows a timetable with tabular view but without any coloring. So
-----
-  python3 script.py -t -c
-----
-is not yet supported.
-====
