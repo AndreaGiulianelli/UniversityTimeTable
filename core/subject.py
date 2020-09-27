@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import datetime
 
 class Subject:
     '''
@@ -25,3 +25,16 @@ class Subject:
 
     def __str__(self):
         return f"{self.__title:<60}{str(self.__start_time)[:-3]} - {str(self.__end_time)[:-3]} @ {self.__aula_text}"
+
+    def get_params(self):
+        params_dict = {
+            "title" : self.__title,
+            "aula" : self.__aula,
+            "start_info" : self.__start_info,
+            "end_info" : self.__end_info,
+            "start_time" : self.__start_time.strftime('%H:%M'),
+            "end_time" : self.__end_time.strftime('%H:%M'),
+            "aula_text" : self.__aula_text
+        }
+
+        return params_dict

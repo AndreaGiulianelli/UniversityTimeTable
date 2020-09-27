@@ -1,0 +1,45 @@
+:requests:  https://requests.readthedocs.io/en/master/[Requests]
+:pip:       https://pip.pypa.io/en/stable/[pip]
+:colorama:  https://pypi.org/project/colorama/[colorama]
+:termcolor:  https://pypi.org/project/termcolor/[TermColor]
+
+== Installation
+
+We need python3 and some modules in order to work.
+Use the package manager {pip} to install {requests}, {colorama} and {termcolor}.
+
+----
+pip install -r requirements.txt
+----
+
+== Usage
+
+Go to the directory and execute the program
+
+Default without parameters: show the third year
+
+----
+    python3 script.py
+----
+
+You can use the parameter `-y` or `--year` to specify a year (between 1 and 3)
+
+----
+    python3 script.py -y 2
+    python3 script.py --year 1
+----
+
+You can disable colors with the parameter `-c`
+
+----
+    python3 script.py -c
+    python3 script.py -c -y 2
+----
+
+You can enable tabular view with the parameter `-t` or `--tabular`
+
+----
+    python3 script.py --tabular
+    python3 script.py -t -y 1
+    python3 script.py -t -c
+----

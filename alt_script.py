@@ -5,11 +5,13 @@
 
     url json service: https://corsi.unibo.it/laurea/IngegneriaScienzeInformatiche/orario-lezioni/@@orario_reale_json?anno=3&curricula=&start=2020-09-21&end=2020-09-28
 '''
-from datetime import date, timedelta
+from datetime import date, timedelta,datetime
 import requests
-from colorama import init
+from core.subject import Subject
+from colorama import Fore, init
 import sys, getopt
-import core.printer as printer
+import core.table_formatter as formatTable
+
 
 def print_help():
     print(f"Usage\n-y <value> or --year <value> : specify custom year (between 1 and 3)\n-c : disable colors\n-t or --tabular : show tabular view")
@@ -52,7 +54,42 @@ data = result.json()
 #Init Colorama, for Windows :(
 init()
 
-if tabular is True:
-    printer.print_tabular_subject(data, colors);
-else:
-    printer.print_listing_subject(data, colors);
+current_day = ""
+#Cycle over all the subjects
+for index in range(0, len(data)):
+    json_data_subject = data[index]
+    subject = Subject(json_data_subject)
+
+    #If the day is different from previous, so this is another day
+    if json_data_subject["start"][:10] != current_day[:10]:
+
+        #New day
+        current_day = json_data_subject["start"]
+        current_date = datetime.strptime(current_day,'%Y-%m-%dT%H:%M:%S')
+
+        if(tabular == True):
+
+            if(index != 0):
+                #Close previous table
+                formatTable.put_table_footer()
+
+            #Open new table
+            formatTable.put_table_header(current_date, colors)
+        else:
+            print((Fore.BLUE if colors == True else "") + f"\n\n{current_date.day}", end="/")
+            print((Fore.GREEN if colors == True else "") + f"{current_date.month}", end="/")
+            print((Fore.YELLOW if colors == True else "") + f"{current_date.year}", end=" ")
+            print((Fore.CYAN if colors == True else "") + f"{current_date.strftime('%A')}")
+            
+            
+    if(tabular == True):
+        formatTable.format_subject(subject, colors)
+    else:
+        # Print the base subject info
+        print((Fore.RED if colors == True else "") + f"{subject}")
+    
+#Close last table
+if(tabular == True):
+    formatTable.put_table_footer()
+
+
